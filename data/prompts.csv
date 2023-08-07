@@ -1,0 +1,31 @@
+prompt,code_snippet
+Calculate the average age of passengers.,average_age = df['Age'].mean()
+Find the total number of passengers.,total_passengers = len(df)
+Calculate the percentage of survivors.,survival_percentage = (df['Survived'].sum() / len(df)) * 100
+Count the number of male passengers.,male_passengers = df[df['Sex'] == 'male'].shape[0]
+Find the median fare paid by passengers.,median_fare = df['Fare'].median()
+Calculate the percentage of passengers in each class.,class_percentages = df['Pclass'].value_counts(normalize=True) * 100
+Find the oldest passenger's name.,oldest_passenger_name = df[df['Age'] == df['Age'].max()]['Name'].values[0]
+Calculate the average age of male passengers.,average_male_age = df[df['Sex'] == 'male']['Age'].mean()
+Determine the most common port of embarkation.,most_common_embarked = df['Embarked'].mode()[0]
+Calculate the correlation between age and fare.,correlation_age_fare = df['Age'].corr(df['Fare'])
+Find the average age of male passengers.,average_male_age = df[df['Sex'] == 'male']['Age'].mean()
+Calculate the median age of female passengers.,median_female_age = df[df['Sex'] == 'female']['Age'].median()
+Group passengers by class and calculate the average fare for each class.,avg_fare_by_class = df.groupby('Pclass')['Fare'].mean()
+Calculate the total number of siblings/spouses (SibSp) on board.,total_siblings_spouses = df['SibSp'].sum()
+Calculate the average fare paid by passengers who survived.,avg_fare_survivors = df[df['Survived'] == 1]['Fare'].mean()
+Calculate the percentage of passengers with missing age values.,missing_age_percentage = (df['Age'].isnull().sum() / len(df)) * 100
+Group passengers by embarkation port and calculate the total fare collected from each port.,total_fare_by_port = df.groupby('Embarked')['Fare'].sum()
+Determine the name of the youngest female passenger.,youngest_female_name = df[df['Sex'] == 'female'][df['Age'] == df[df['Sex'] == 'female']['Age'].min()]['Name'].values[0]
+Calculate the correlation between age and number of siblings/spouses (SibSp).,correlation_age_sibsp = df['Age'].corr(df['SibSp'])
+Group passengers by class and calculate the average age for each class.,avg_age_by_class = df.groupby('Pclass')['Age'].mean()
+Find the fare paid by the oldest passenger.,oldest_passenger_fare = df[df['Age'] == df['Age'].max()]['Fare'].values[0]
+Calculate the total number of passengers for each class and gender combination.,"total_passengers_by_class_gender = df.groupby(['Pclass', 'Sex']).size()"
+Determine the name of the passenger with the highest fare.,highest_fare_passenger_name = df[df['Fare'] == df['Fare'].max()]['Name'].values[0]
+Calculate the percentage of passengers in each class who survived.,survival_percentage_by_class = (df.groupby('Pclass')['Survived'].mean() * 100).round(2)
+"Find the average fare paid by passengers who traveled alone (no siblings, spouses, parents, or children).",avg_fare_alone_passengers = df[df['SibSp'] == 0]['Fare'].mean()
+Determine the most common age among passengers.,most_common_age = df['Age'].mode()[0]
+Calculate the standard deviation of fares for passengers who survived.,fare_std_survivors = df[df['Survived'] == 1]['Fare'].std()
+Calculate the total number of passengers with missing cabin values.,missing_cabin_count = df['Cabin'].isnull().sum()
+"Group passengers by age range (e.g., 0-9, 10-19, etc.) and calculate the average fare for each group.","avg_fare_by_age_range = df.groupby(pd.cut(df['Age'], bins=range(0, 81, 10)))['Fare'].mean()"
+Calculate the median fare paid by passengers in each class.,median_fare_by_class = df.groupby('Pclass')['Fare'].median()

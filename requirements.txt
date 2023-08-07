@@ -1,0 +1,9 @@
+transformers
+pandas
+torch
+numpy
+matplotlib
+seaborn
+nbformat
+pyyaml
+openai
